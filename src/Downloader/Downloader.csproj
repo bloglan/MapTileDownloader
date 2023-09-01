@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net7.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<UserSecretsId>dotnet-TileDownloader-965c839f-ec0a-439e-871e-bb35f4c6d6c5</UserSecretsId>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="DownloaderTests" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Extensions.Hosting" Version="7.0.1" />
+		<PackageReference Include="NetTopologySuite" Version="2.5.0" />
+		<PackageReference Include="ProjNet" Version="2.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="yunnan-scope.wkt">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
+</Project>

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33815.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Downloader", "Downloader\Downloader.csproj", "{E6715B4B-C560-4464-A400-4764B0393630}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DownloaderTests", "DownloaderTests\DownloaderTests.csproj", "{BD5F2934-A83C-4451-8082-3174B2D6E930}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{C38218CA-8444-416B-9899-A03901EB97B1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E6715B4B-C560-4464-A400-4764B0393630}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6715B4B-C560-4464-A400-4764B0393630}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6715B4B-C560-4464-A400-4764B0393630}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6715B4B-C560-4464-A400-4764B0393630}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD5F2934-A83C-4451-8082-3174B2D6E930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD5F2934-A83C-4451-8082-3174B2D6E930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD5F2934-A83C-4451-8082-3174B2D6E930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD5F2934-A83C-4451-8082-3174B2D6E930}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1771A8BC-8D3C-4892-B93A-6E6D238C51E7}
+	EndGlobalSection
+EndGlobal
