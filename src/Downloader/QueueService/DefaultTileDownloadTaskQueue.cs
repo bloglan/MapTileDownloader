@@ -1,17 +1,20 @@
-﻿using System.Threading.Channels;
+﻿using Microsoft.Extensions.Options;
+using System.Threading.Channels;
 
 namespace Downloader.QueueService;
 internal class DefaultTileDownloadTaskQueue : ITileDownloadTaskQueue
 {
     private readonly Channel<Func<CancellationToken, ValueTask>> _queue;
+    private readonly DefaultTileDownloadTaskQueueOptions options;
 
-    public DefaultTileDownloadTaskQueue(int capacity)
+    public DefaultTileDownloadTaskQueue(IOptions<DefaultTileDownloadTaskQueueOptions> options)
     {
-        BoundedChannelOptions options = new(capacity)
+        this.options = options.Value;
+        BoundedChannelOptions boundedOptions = new(this.options.QueueCapacity)
         {
             FullMode = BoundedChannelFullMode.Wait
         };
-        this._queue = Channel.CreateBounded<Func<CancellationToken, ValueTask>>(options);
+        this._queue = Channel.CreateBounded<Func<CancellationToken, ValueTask>>(boundedOptions);
     }
 
     public async ValueTask QueueAsync(

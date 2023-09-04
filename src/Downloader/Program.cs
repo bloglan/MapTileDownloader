@@ -8,10 +8,7 @@ builder.Services.AddHostedService<TileDownloadService>();
 builder.Services.AddHostedService<QueuedTileDownloader>();
 
 builder.Services.AddScoped<TileDownloadManager>();
-builder.Services.AddSingleton<ITileDownloadTaskQueue>(_ =>
-{
-    return new DefaultTileDownloadTaskQueue(64);
-});
+builder.Services.AddSingleton<ITileDownloadTaskQueue, DefaultTileDownloadTaskQueue>();
 
 var host = builder.Build();
 
